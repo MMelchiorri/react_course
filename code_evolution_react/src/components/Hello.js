@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Hello = () => {
+const Hello = (props) => {
+  const { name, children } = props;
   return (
     <div className="greetings">
-      <h1>Hello, Marco</h1>
+      <h1>Hello, {name}</h1>
+      {children}
     </div>
   );
 };
