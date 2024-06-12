@@ -5,6 +5,7 @@ import Hello from './components/Hello';
 import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
+import EventBind from './components/EventBind';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       {/* <Greet /> */}
       {/* <Welcome /> */}
       <Counter />
+      <EventBind />
       <Hello name={'Marco'}>
         <h1>This is first children</h1>
         <h2>this is second children</h2>
