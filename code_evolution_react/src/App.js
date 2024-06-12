@@ -7,6 +7,7 @@ import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import EventBind from './components/EventBind';
 import ParentCompoent from './components/ParentCompoent';
+import NamedList from './components/namedList';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/*<Hello name={'Daniele'} />*/}
       {/*<Hello name={'Davide'} />*/}
       {/*<Message />*/}
-      <ParentCompoent />
+      {/*<ParentCompoent />*/}
+      <NamedList />
     </div>
   );
 }
