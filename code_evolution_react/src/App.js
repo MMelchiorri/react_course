@@ -1,10 +1,10 @@
 import './App.css';
-import RefsDemo from './components/RefsDemo';
+import ClickMe from './components/ClickMe';
 
 function App() {
   return (
     <div className="App">
-      <RefsDemo />
+      <ClickMe />
     </div>
   );
 }
