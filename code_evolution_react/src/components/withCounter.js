@@ -1,34 +1,27 @@
 import React, { Component } from 'react';
 
 const withCounter = (WrappedComponent) => {
-  {
-    class WithCounter extends React.Component {
-      constructor(props) {
-        super(props);
+  class WithCounter extends Component {
+    state = {
+      count: 0,
+    };
 
-        this.state = {
-          count: 0,
-        };
-      }
+    incrementCount = () => {
+      this.setState((prevState) => ({
+        count: prevState.count + 1,
+      }));
+    };
 
-      incrementCount() {
-        this.setState((prevState) => {
-          return {
-            count: prevState.count + 1,
-          };
-        });
-      }
-      render() {
-        return (
-          <WrappedComponent
-            count={this.state.count}
-            incrementCount={this.state.incrementCount}
-          />
-        );
-      }
+    render() {
+      return (
+        <WrappedComponent
+          count={this.state.count}
+          incrementCount={this.incrementCount}
+        />
+      );
     }
-    return WithCounter;
   }
+  return WithCounter;
 };
 
 export default withCounter;
