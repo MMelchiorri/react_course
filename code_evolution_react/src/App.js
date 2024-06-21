@@ -1,10 +1,14 @@
 import './App.css';
-import ClickMe from './components/ClickMe';
-
+import ClickCounter from './components/ClickCounter';
+import CounterThree from './components/CounterThree';
 function App() {
   return (
     <div className="App">
-      <ClickMe />
+      <CounterThree>
+        {(count, incrementCount) => (
+          <ClickCounter count={count} incrementCount={incrementCount} />
+        )}
+      </CounterThree>
     </div>
   );
 }
