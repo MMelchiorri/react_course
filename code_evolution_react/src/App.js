@@ -1,13 +1,12 @@
 import './App.css';
-import ComponentA from './components/ComponentA';
-import { UserProvider } from './components/userContext';
+import PostForm from './components/PostForm';
+import PostList from './components/PostList';
 
 function App() {
   return (
     <div className="App">
-      <UserProvider value={'Marco'}>
-        <ComponentA />
-      </UserProvider>
+      <PostForm />
+      <PostList />
     </div>
   );
 }
