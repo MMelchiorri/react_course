@@ -1,14 +1,13 @@
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import CounterThree from './components/CounterThree';
+import ComponentA from './components/ComponentA';
+import { UserProvider } from './components/userContext';
+
 function App() {
   return (
     <div className="App">
-      <CounterThree>
-        {(count, incrementCount) => (
-          <ClickCounter count={count} incrementCount={incrementCount} />
-        )}
-      </CounterThree>
+      <UserProvider value={'Marco'}>
+        <ComponentA />
+      </UserProvider>
     </div>
   );
 }
