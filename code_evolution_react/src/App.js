@@ -1,12 +1,10 @@
 import './App.css';
-import PostForm from './components/PostForm';
-import PostList from './components/PostList';
+import CounterFour from './components/Function/CounterFour';
 
 function App() {
   return (
     <div className="App">
-      <PostForm />
-      <PostList />
+      <CounterFour />
     </div>
   );
 }
