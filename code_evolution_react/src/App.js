@@ -1,12 +1,17 @@
 import './App.css';
-import DataFetching from './components/Function/DataFetching';
-import IntervalHookCounter from './components/Function/IntervalHookCounter';
-import MouseContainer from './components/Function/MouseContainer';
+import React from 'react';
+import CreateContextWithHookA from './components/Function/CreateContextWithHookA';
 
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <UserContext.Provider value={'Marco'}>
+        <ChannelContext.Provider value={'Code Evolution'}>
+          <CreateContextWithHookA />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
